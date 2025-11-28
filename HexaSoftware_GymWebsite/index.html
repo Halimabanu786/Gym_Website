@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PowerFit Gym</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{ background:#f5f5f5; }
+
+    nav{
+      background:#111;
+      color:white;
+      padding:15px 0;
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+    }
+
+    nav .container{
+      width:90%;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav ul{ display:flex; list-style:none; }
+    nav ul li{ margin-left:20px; }
+    nav ul li a{ color:white; text-decoration:none; }
+    nav ul li a:hover{ color:orange; }
+
+    section{ padding:90px 0; }
+    .container{ width:90%; margin:auto; }
+    h2{ text-align:center; margin-bottom:30px; }
+
+    /* HOME */
+    #home{
+      background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1');
+      height:100vh;
+      background-size:cover;
+      background-position:center;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    #home h1{ font-size:42px; }
+
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:10px 25px;
+      background:orange;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      border:none;
+      cursor:pointer;
+    }
+
+    /* ABOUT */
+    .about-box{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:center;
+    }
+
+    .about-box img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    /* CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:15px;
+      border-radius:10px;
+      text-align:center;
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    /* MEMBERSHIP */
+    #membership .price-cards{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:50px;
+    }
+
+    .price{
+      background:orange;
+      padding:50px;
+      text-align:center;
+      border-radius:30px;
+      width:300px;
+    }
+
+    /* TRAINERS */
+    .trainer-cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap: 10px;
+    }
+
+    .trainer{
+      background:white;
+      text-align:center;
+      padding:100px;
+      border-radius:10px;
+    }
+
+    .trainer img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    /* CONTACT */
+    form input, form textarea{
+      width:100%;
+      padding:10px;
+      margin:8px 0;
+      border:1px solid #ccc;
+      border-radius:5px;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:15px;
+    }
+
+    @media(max-width:768px){
+      .about-box{ grid-template-columns:1fr; }
+      #home h1{ font-size:28px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <h2>PowerFit</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#membership">Membership</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div>
+    <h1>TRANSFORM YOUR BODY<br>TRANSFORM YOUR LIFE</h1>
+    <a href="#membership" class="btn">Join Now</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>ABOUT US</h2>
+    <div class="about-box">
+      <img src="https://media.gettyimages.com/id/1183038884/photo/view-of-a-row-of-treadmills-in-a-gym-with-people.jpg?s=170667a&w=gi&k=20&c=cgC7O2gPoKgSYlTEUk_atDK2LewNGJqwSZkRtkDly44=">
+      <div>
+        <p>PowerFit Gym helps you become stronger, healthier, and more confident.</p>
+        <ul style="margin-top:15px; line-height:28px;">
+          <li>✅ Certified Trainers</li>
+          <li>✅ Modern Equipment</li>
+          <li>✅ Personal Guidance</li>
+          <li>✅ Nutrition Support</li>
+          <li>✅ Beginner Friendly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ FACILITIES (WEIGHT IMAGE FIXED) -->
+<section id="facilities" style="margin-top:50px;">
+  <div class="container">
+    <h2>OUR FACILITIES</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg">
+        <h3>Weight Training</h3>
+        <p>Dumbbells, barbells and advanced machines</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/414029/pexels-photo-414029.jpeg">
+        <h3>Cardio Zone</h3>
+        <p>Treadmill, cycle & fat burn machines</p>
+      </div>
+
+      <div class="card">
+        <img src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2022/11/9/naom5a13e9e3d40db-16679690973551034970822.jpg">
+        <h3>Group Classes</h3>
+        <p>Zumba, yoga & strength training</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ SERVICES (PERSONAL TRAINING IMAGE FIXED) -->
+<section id="services">
+  <div class="container">
+    <h2>OUR SERVICES</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://www.cnet.com/a/img/resize/7768189eac216e19e71970ff3de7e1151fb03a83/hub/2022/03/31/c95b9020-34d2-4966-91c6-c22c5ad64692/squat-kazuma-seki.jpg?auto=webp&fit=crop&height=900&width=1200">
+        <h3>Personal Training</h3>
+        <p>One-to-one customized private training sessions.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg">
+        <h3>Nutrition Planning</h3>
+        <p>Special food diet plans for weight loss & gain.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://educatefitness.co.uk/wp-content/uploads/2023/05/Top-Body-Composition-Assessment-Techniques-for-Fitness-Centers.jpg">
+        <h3>Body Analysis</h3>
+        <p>Check body fat, strength and muscle levels.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership">
+  <div class="container">
+    <h2>MEMBERSHIP PLANS</h2>
+    <div class="price-cards">
+      <div class="price"><h3>Basic</h3><h1>₹999</h1></div>
+      <div class="price"><h3>Premium</h3><h1>₹1499</h1></div>
+      <div class="price"><h3>VIP</h3><h1>₹2299</h1></div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ TRAINERS (SARAH & DAVID IMAGE FIXED) -->
+<section id="trainers">
+  <div class="container">
+    <h2>OUR TRAINERS</h2>
+    <div class="trainer-cards">
+
+      <div class="trainer">
+        <img src="https://media.istockphoto.com/id/1956798859/photo/a-personal-trainer-is-showing-a-sportswoman-exercises-with-kettlebell-in-a-gym.jpg?s=612x612&w=0&k=20&c=cgh0iZxnIJlD36Qy0cESU9vinfdUdd1qV8b1Fdsp4EA=">
+        <h3>Michael</h3>
+      </div>
+
+      <div class="trainer">
+        <img src="https://images.pexels.com/photos/3757954/pexels-photo-3757954.jpeg">
+        <h3>Sarah</h3>
+      </div>
+
+      <div class="trainer">
+        <img src="https://media.istockphoto.com/id/675179390/photo/muscular-trainer-writing-on-clipboard.jpg?s=612x612&w=0&k=20&c=9NKx1AwVMpPY0YBlk5H-hxx2vJSCu1Wc78BKRM9wFq0=">
+        <h3>David</h3>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ✅ CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2>CONTACT US</h2>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px;">
+
+      <div>
+        <p>📍 Chennai, Tamil Nadu</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ powerfitgym@gmail.com</p>
+      </div>
+
+      <div>
+        <form onsubmit="showMessage(event)">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button class="btn">Send Message</button>
+          <p id="successMsg" style="color:green; margin-top:10px; display:none;">
+            ✅ Your message was sent successfully!
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 PowerFit Gym | All Rights Reserved</p>
+</footer>
+
+<script>
+function showMessage(e){
+  e.preventDefault();
+  document.getElementById("successMsg").style.display = "block";
+}
+</script>
+
+</body>
+</html>
